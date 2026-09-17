@@ -28,7 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <nav className="m-4 flex gap-4 ">
           <CustomLink path="/">Home</CustomLink>
           <CustomLink path="/dashboard/Analytics">Analytics</CustomLink>
-          <CustomLink path="/dashboard/settings">Settings</CustomLink>
+          <CustomLink prefetch={false} path="/dashboard/settings">
+            Settings
+          </CustomLink>
         </nav>
         {children}
       </body>

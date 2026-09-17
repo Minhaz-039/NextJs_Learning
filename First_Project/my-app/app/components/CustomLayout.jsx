@@ -2,11 +2,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function CustomLink({ path, children }) {
+function CustomLink({ path, children, prefetch = true }) {
   const pathName = usePathname();
   let active = pathName === path;
   return (
-    <Link className={active ? "text-blue-800" : ""} href={path}>
+    <Link
+      prefetch={prefetch}
+      className={active ? "text-blue-800" : ""}
+      href={path}
+    >
       {children}
     </Link>
   );
