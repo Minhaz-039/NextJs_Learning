@@ -31,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <CustomLink prefetch={false} path="/dashboard/settings">
             Settings
           </CustomLink>
+          <CustomLink path="/Heavy">Heavy</CustomLink>
         </nav>
         {children}
       </body>
