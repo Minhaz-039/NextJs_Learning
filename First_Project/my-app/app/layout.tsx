@@ -27,11 +27,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <nav className="m-4 flex gap-4 ">
           <CustomLink path="/">Home</CustomLink>
-          <CustomLink path="/dashboard/Analytics">Analytics</CustomLink>
-          <CustomLink prefetch={false} path="/dashboard/settings">
+          <CustomLink path="/Analytics">Analytics</CustomLink>
+          <CustomLink prefetch={false} path="/settings">
             Settings
           </CustomLink>
-          <CustomLink path="/Heavy">Heavy</CustomLink>
+          <CustomLink prefetch={false} path="/Heavy">
+            Heavy
+          </CustomLink>
+          <CustomLink prefetch={false} path="/blogs">
+            Blogs
+          </CustomLink>
         </nav>
         {children}
       </body>

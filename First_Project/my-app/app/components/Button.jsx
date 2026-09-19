@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 function Button() {
   const router = useRouter();
   function handleButtonClick() {
-    router.push("/dashboard/Analytics");
+    router.push("/Analytics");
   }
   return (
     <button

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Button from "../../components/Button";
 
 export const metadata = {
@@ -11,7 +12,9 @@ export default function SettingsPage() {
     <div>
       <h1 className="m-2 font-extrabold text-6xl">Settings Page</h1>
       <p className="m-2 text-2xl">Manage your application settings here.</p>
-      <Button></Button>
+      <Suspense fallback={<div className="text-xl font-bold">Loading......</div>}>
+        <Button></Button>
+      </Suspense>
     </div>
   );
 }

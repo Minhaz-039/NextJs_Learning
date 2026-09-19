@@ -1,7 +1,4 @@
-async function Heavy() {
-  // Stand-in for a real data fetch — the await is what suspends,
-  // which is what makes loading.js show.
-  await new Promise((r) => setTimeout(r, 3000));
+function Heavy() {
 
   return (
     <div>
