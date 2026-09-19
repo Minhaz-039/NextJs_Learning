@@ -37,6 +37,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <CustomLink prefetch={false} path="/blogs">
             Blogs
           </CustomLink>
+          <CustomLink prefetch={false} path="/blogStatic">
+            Blog Static
+          </CustomLink>
         </nav>
         {children}
       </body>
