@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-/* darkMode: "class" from tailwind.config.js — v4 needs the variant declared here too */
+/* darkMode: "className" from tailwind.config.js — v4 needs the variant declared here too */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
