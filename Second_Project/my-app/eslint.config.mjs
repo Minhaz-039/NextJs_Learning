@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // CommonJS build-time config, loaded by Tailwind's @config — not app source.
+    "tailwind.config.js",
+    "typography.js",
   ]),
 ]);
 
