@@ -4,7 +4,7 @@ import Mob_res_Header from "./Mob_res_Header";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
 
-function Header() {
+function Header({ docs }) {
   return (
     <header className="contents lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 lg:block lg:w-72 lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:px-6 lg:pb-8 lg:pt-4 lg:dark:border-white/10 xl:w-80">
       {/* <!-- Logo  --> */}
@@ -54,7 +54,7 @@ function Header() {
       {/* <!-- Header Ends --> */}
 
       {/* <!-- sidebar nav --> */}
-      <Sidebar />
+      <Sidebar docs={docs} />
       {/* <!-- Sidebar nav ends --> */}
     </header>
   );

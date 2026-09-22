@@ -1,5 +1,5 @@
 ---
-title: "Intoduction"
+title: "Test"
 date: "21 sptember 2026"
 author: "Minhaz Reza"
 category: "General"

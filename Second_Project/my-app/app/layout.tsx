@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  const docs = getDocument();
-  console.log("docs", docs);
+  const allDocument = getDocument();
+
   return (
     <html
       lang="en"
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <div className="h-full lg:ml-72 xl:ml-80">
-          <Header />
+          <Header docs={allDocument} />
           {children}
         </div>
       </body>
