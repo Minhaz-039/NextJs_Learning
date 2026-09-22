@@ -1,3 +1,5 @@
+import ContentDisplay from "../../../../component/ContentDisplay";
+
 async function page({ params }) {
   const { subContentId } = await params;
 
@@ -12,7 +14,7 @@ async function page({ params }) {
         </div>
         {/* <!-- Green Top Overlay End--> */}
 
-        <div>{subContentId}</div>
+        <ContentDisplay id={subContentId} />
       </main>
     </div>
   );
