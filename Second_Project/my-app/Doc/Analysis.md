@@ -1,7 +1,7 @@
 ---
 title: "Analysis"
 date: "21 sptember 2026"
-author: "Minhaz Reza"
+author: "Minhazul"
 category: "General"
 tags: ["Technology", "Analytics"]
 parent: null

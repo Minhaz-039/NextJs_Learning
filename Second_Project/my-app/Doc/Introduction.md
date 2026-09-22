@@ -1,7 +1,7 @@
 ---
 title: "Intoduction"
 date: "21 sptember 2026"
-author: "Minhaz Reza"
+author: "Hasnain"
 category: "General"
 tags: ["Intro", "Getting-started"]
 parent: null

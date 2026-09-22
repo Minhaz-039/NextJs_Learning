@@ -1,7 +1,7 @@
 ---
 title: "Test"
 date: "21 sptember 2026"
-author: "Minhaz Reza"
+author: "Ayon"
 category: "General"
 tags: ["Test", "Technology"]
 parent: Introduction

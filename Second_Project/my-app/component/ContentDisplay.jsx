@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { getDocumentContent } from "../lib/doc";
+import Link from "next/link";
+import Tag from "./Tag";
 
 async function ContentDisplay({ id }) {
   const DocumentContent = await getDocumentContent({ id });
@@ -11,32 +13,29 @@ async function ContentDisplay({ id }) {
           <div className="mx-auto grid max-w-160 grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-5">
             <div className="flex flex-col lg:pb-6 lg:col-span-2 justify-center">
               <h1 className="mt-4 text-6xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-14">
-                Protocol
+                {DocumentContent.title}
               </h1>
 
-              <p className="mt-6 text-base leading-7 text-slate-700">
-                It doesn&apos;t matter if you have an API if nobody knows how to
-                use it. Teach people the ins and outs of OAuth 2.0 and JWTs in
-                style with Protocol, a beautiful API documentation template.
-              </p>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="#"
-                  className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
-                  target="_blank"
+              <div>
+                <span>Published On : {DocumentContent.date}</span> by{" "}
+                {DocumentContent.author}{" "}
+                <Link
+                  className="text-blue-800"
+                  href={`/categories/${DocumentContent.category}`}
                 >
-                  <span>Get Started</span>
-                </a>
+                  {DocumentContent.category}
+                </Link>{" "}
+                category
               </div>
-            </div>
-            <div className="relative lg:col-span-3">
-              <Image
-                src="/banner.png"
-                width="1600"
-                height="1280"
-                className="relative z-20 -mb-36 aspect-853/682 max-w-157.5 rounded-xl bg-slate-200 shadow-xl shadow-black/5 ring-1 ring-slate-900/5 sm:-mb-16 lg:-mb-8 xl:-mb-16"
-                alt="Image"
+
+              {DocumentContent.tags &&
+                DocumentContent.tags.map((tag) => <Tag key={tag} tag={tag} />)}
+
+              <div
+                className="prose prose-slate max-w-none"
+                dangerouslySetInnerHTML={{
+                  __html: DocumentContent.contentHtml,
+                }}
               />
             </div>
           </div>

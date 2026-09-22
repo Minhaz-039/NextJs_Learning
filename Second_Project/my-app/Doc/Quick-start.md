@@ -1,7 +1,7 @@
 ---
 title: "Quick-start"
 date: "21 sptember 2026"
-author: "Minhaz Reza"
+author: "Reza"
 category: "General"
 tags: ["Getting-started"]
 parent: null

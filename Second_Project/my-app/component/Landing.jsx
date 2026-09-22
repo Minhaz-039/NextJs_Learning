@@ -16,16 +16,6 @@ function Landing() {
                 use it. Teach people the ins and outs of OAuth 2.0 and JWTs in
                 style with Protocol, a beautiful API documentation template.
               </p>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="#"
-                  className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
-                  target="_blank"
-                >
-                  <span>Get Started</span>
-                </a>
-              </div>
             </div>
             <div className="relative lg:col-span-3">
               <Image
