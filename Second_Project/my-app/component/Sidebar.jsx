@@ -6,7 +6,7 @@ function Sidebar({ docs }) {
     docs.filter((doc) => doc.parent != null),
     ({ parent }) => parent,
   );
-  console.log("roots", roots);
+
   return (
     <nav className="hidden lg:mt-10 lg:block">
       <ul role="list" className="border-l border-transparent">
